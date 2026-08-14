@@ -1,0 +1,4 @@
+.note_task/
+__pycache__/
+.flaskenv
+fack_db.json
