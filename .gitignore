@@ -2,3 +2,5 @@
 __pycache__/
 .flaskenv
 fack_db.json
+0.py
+project_merged.txt
