@@ -9,6 +9,7 @@ from flask_smorest import Api
 from database import db
 from routers import note_blp, user_blp
 from utils.datetime_utils import get_datetime_now
+
 # === App Setup ===
 app = Flask(__name__)
 CORS(app)  # السماح بالوصول من أي مصدر (Cross-Origin Resource Sharing
@@ -31,7 +32,7 @@ def handel_global_error(error):
         f.write("=" * 50 + "\n")
         f.write(f"Time: {get_datetime_now()}\n")
         f.write(f"Error Type: {type(error).__name__}\n")
-        f.write(f"Error Message: {error!r}\n")
+        f.write(f"Error Message: {error!s}\n")
         f.write("-" * 50 + "\n")
         f.write(traceback.format_exc())
         f.write("\n\n")

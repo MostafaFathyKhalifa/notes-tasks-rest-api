@@ -7,7 +7,7 @@ class NoteModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False )
-    title = db.Column(db.String(255), nullable=False, unique=True)
+    title = db.Column(db.String(255), nullable=False)
     content = db.Column(db.Text, nullable=True)
     created_at = db.Column(db.DateTime, default=get_datetime_now)
     updated_at = db.Column(db.DateTime, default=get_datetime_now, onupdate=get_datetime_now)

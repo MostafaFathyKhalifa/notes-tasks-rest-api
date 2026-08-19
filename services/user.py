@@ -19,7 +19,7 @@ def register_user(user_data: dict):
     if not isinstance(email, str) or "@" not in email or "." not in email:
         return None, "Invalid email format."
     if not isinstance(password,str):
-        return None,"Invalid Password, mast be string"
+        return None,"Invalid Password, must be string"
 
     if UserModel.query.filter_by(user_name=user_name).first():
         return None, "Username already exists."
@@ -61,9 +61,9 @@ def login_user(user_data: dict):
         return None, "Email and password are required."
 
     if email and not isinstance(email, str):
-        return None, "email mast be string."
+        return None, "email must be string."
     if password and not isinstance(password, str):
-        return None, "password mast be string."
+        return None, "password must be string."
 
     user: UserModel | None = UserModel.query.filter_by(email=email.strip()).first()
 

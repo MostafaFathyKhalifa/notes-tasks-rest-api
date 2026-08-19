@@ -70,14 +70,13 @@ def get_note_by_id(note_id: int, user_id: int):
     if note is None:
         return None, "Note not found."
     as_json = {
-        "note": {
+
             "id": note.id,
             "title": note.title,
             "content": note.content,
             "created_at": note.created_at.isoformat(),
             "updated_at": note.updated_at.isoformat(),
         }
-    }
     return as_json, None
 
 

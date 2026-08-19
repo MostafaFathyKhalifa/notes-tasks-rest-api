@@ -53,7 +53,7 @@ def get_all_notes(user_id: int):
 # === Get a specific note by ID ===
 @note_blp.get("/<int:note_id>")
 @require_auth
-def get_note_by_id(note_id: int, user_id):
+def get_note_by_id(note_id: int, user_id:int):
     note_data, message = note_service.get_note_by_id(note_id, user_id)
     if note_data is None:
         return {"message": message}, 404

@@ -6,3 +6,5 @@ fack_db.json
 project_merged.txt
 instance/
 .env
+frontend/
+*.zip
